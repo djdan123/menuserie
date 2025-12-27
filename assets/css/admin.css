@@ -1,0 +1,195 @@
+/* Admin Dashboard Modern & Responsive Styles */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f4f6f8;
+    margin: 0;
+    color: #222;
+}
+
+.admin-header {
+    background: #222e3a;
+    color: #fff;
+    padding: 1.2rem 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+.admin-header .logo {
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.admin-sidebar {
+    background: #263043;
+    color: #fff;
+    min-height: 100vh;
+    width: 220px;
+    position: fixed;
+    top: 0; left: 0;
+    padding: 2rem 1rem 1rem 1rem;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.04);
+    z-index: 10;
+}
+.admin-sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+.admin-sidebar li {
+    margin-bottom: 1.2rem;
+}
+.admin-sidebar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.2s;
+}
+.admin-sidebar a:hover {
+    color: #4fc3f7;
+}
+
+.admin-content {
+    margin-left: 240px;
+    padding: 2rem 2rem 2rem 2rem;
+}
+
+@media (max-width: 900px) {
+    .admin-sidebar {
+        position: static;
+        width: 100%;
+        min-height: auto;
+        display: flex;
+        flex-direction: row;
+        padding: 1rem;
+    }
+    .admin-sidebar ul {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+    }
+    .admin-content {
+        margin-left: 0;
+        padding: 1rem;
+    }
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    margin-bottom: 2rem;
+}
+.admin-table th, .admin-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: left;
+}
+.admin-table th {
+    background: #f5f7fa;
+    font-weight: 600;
+}
+.admin-table tr:last-child td {
+    border-bottom: none;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1.2rem;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    margin-right: 0.5rem;
+}
+.btn-primary {
+    background: #3498db;
+    color: #fff;
+}
+.btn-primary:hover {
+    background: #217dbb;
+}
+.btn-secondary {
+    background: #e0e0e0;
+    color: #222;
+}
+.btn-secondary:hover {
+    background: #bdbdbd;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: #fafbfc;
+    transition: border 0.2s;
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+.alert {
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+.alert-success {
+    background: #e8f5e9;
+    color: #388e3c;
+}
+.alert-error {
+    background: #ffebee;
+    color: #c62828;
+}
+
+.card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+.stats-card {
+    background: #3498db;
+    color: #fff;
+    border-radius: 8px;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    text-align: center;
+    font-size: 1.3rem;
+}
+.stats-card .stat-value {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 600px) {
+    .admin-content, .card, .stats-card {
+        padding: 1rem;
+    }
+    .stats-grid {
+        gap: 1rem;
+    }
+}

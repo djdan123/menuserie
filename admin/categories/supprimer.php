@@ -1,0 +1,16 @@
+<?php
+require_once '../../config/database.php';
+require_once '../../config/functions.php';
+
+if (!estAdmin()) {
+    header('Location: ../login.php');
+    exit();
+}
+
+$id = (int)($_GET['id'] ?? 0);
+if ($id > 0) {
+    $stmt = $pdo->prepare('DELETE FROM categories WHERE id_categorie = ?');
+    $stmt->execute([$id]);
+}
+header('Location: index.php');
+exit();

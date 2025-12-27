@@ -1,0 +1,814 @@
+/* Détail produit */
+.breadcrumb {
+    margin: 1rem 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.breadcrumb a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.breadcrumb span {
+    color: #333;
+    font-weight: 500;
+}
+
+.produit-detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin: 2rem 0;
+}
+
+@media (max-width: 768px) {
+    .produit-detail {
+        grid-template-columns: 1fr;
+    }
+}
+
+.produit-gallery {
+    position: sticky;
+    top: 20px;
+}
+
+.produit-image-main {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.produit-image-main img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.produit-info-detail h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.produit-meta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.produit-categorie {
+    background: #e8f4fc;
+    color: #3498db;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.produit-stock {
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.produit-stock.in-stock {
+    background: #d4edda;
+    color: #155724;
+}
+
+.produit-stock.low-stock {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.stock-warning {
+    color: #e74c3c;
+    font-weight: 500;
+}
+
+.produit-prix-detail {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.produit-prix-detail .prix {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #e67e22;
+    display: block;
+}
+
+.produit-prix-detail small {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.produit-caracteristiques {
+    margin: 1.5rem 0;
+}
+
+.produit-caracteristiques h3 {
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+}
+
+.produit-caracteristiques ul {
+    list-style: none;
+    padding: 0;
+}
+
+.produit-caracteristiques li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.produit-caracteristiques li:last-child {
+    border-bottom: none;
+}
+
+/* Quantité selector */
+.quantite-selector {
+    margin: 1.5rem 0;
+}
+
+.quantite-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0.5rem 0;
+}
+
+.quantite-btn {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #ddd;
+    background: white;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.quantite-btn:hover {
+    border-color: #3498db;
+    background: #f8f9fa;
+}
+
+.quantite-input {
+    width: 80px;
+    height: 40px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.stock-max {
+    display: block;
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+}
+
+.btn-ajouter {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    margin: 1rem 0;
+}
+
+.login-required {
+    text-align: center;
+    color: #666;
+    margin: 0.5rem 0;
+}
+
+.login-required a {
+    color: #3498db;
+    font-weight: 500;
+}
+
+.out-of-stock {
+    padding: 1.5rem;
+    background: #fff3cd;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Description produit */
+.produit-description-detail {
+    margin: 3rem 0;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.produit-description-detail h2 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #3498db;
+}
+
+.description-content {
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+/* Meubles similaires */
+.meubles-similaires {
+    margin: 3rem 0;
+}
+
+.meubles-similaires h2 {
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+}
+
+/* Commande - Étapes */
+.commande-etapes {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0;
+    position: relative;
+}
+
+.commande-etapes:before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #ddd;
+    z-index: 1;
+}
+
+.commande-etapes .etape {
+    position: relative;
+    z-index: 2;
+    background: white;
+    padding: 0.5rem 1rem;
+    border: 2px solid #ddd;
+    border-radius: 20px;
+    color: #666;
+}
+
+.commande-etapes .etape.active {
+    border-color: #3498db;
+    background: #3498db;
+    color: white;
+}
+
+/* Sections commande */
+.commande-section {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 1.5rem;
+}
+
+.commande-section h2 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.info-client p {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    background: #f8f9fa;
+    border-radius: 4px;
+}
+
+/* Tableau récapitulatif */
+.table-recap {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-recap th,
+.table-recap td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.table-recap th {
+    background: #f8f9fa;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.table-recap tfoot tr:last-child td {
+    border-bottom: none;
+}
+
+.total-row {
+    background: #f8f9fa;
+    font-weight: bold;
+}
+
+.total-row td {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+/* Conditions */
+.condition-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0.75rem 0;
+}
+
+.condition-item input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+}
+
+.livraison-info {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: #e8f4fc;
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+}
+
+.livraison-info h3 {
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+}
+
+.livraison-info ul {
+    margin: 0.5rem 0 0 1.5rem;
+    color: #666;
+}
+
+/* Actions commande */
+.commande-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.form-confirmation {
+    text-align: right;
+}
+
+.note-paiement {
+    margin-top: 0.5rem;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Statistiques client */
+.client-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.stat-client {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.stat-client .stat-icon {
+    font-size: 2rem;
+    width: 60px;
+    height: 60px;
+    background: #3498db;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stat-client .stat-info h3 {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+}
+
+.stat-client .stat-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin: 0.25rem 0 0 0;
+}
+
+/* Tableau commandes client */
+.table-commandes {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+.table-commandes th,
+.table-commandes td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.table-commandes th {
+    background: #f8f9fa;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.statut-client {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.statut-en-attente {
+    background: #f39c12;
+    color: white;
+}
+
+.statut-confirmée {
+    background: #3498db;
+    color: white;
+}
+
+.statut-en-fabrication {
+    background: #9b59b6;
+    color: white;
+}
+
+.statut-livrée {
+    background: #27ae60;
+    color: white;
+}
+
+.statut-annulée {
+    background: #e74c3c;
+    color: white;
+}
+
+.progress-bar {
+    margin-top: 0.5rem;
+    height: 8px;
+    background: #eee;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-bar .progress {
+    height: 100%;
+    background: #3498db;
+    border-radius: 4px;
+    transition: width 0.3s;
+}
+
+.progress-bar span {
+    position: absolute;
+    right: 0;
+    top: -20px;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+/* Suivi fabrication */
+.suivi-fabrication {
+    margin: 3rem 0;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.suivi-fabrication h2 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #3498db;
+}
+
+.fabrication-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.fabrication-card {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.fabrication-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.fabrication-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.fabrication-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.fabrication-card:hover .fabrication-image img {
+    transform: scale(1.05);
+}
+
+.fabrication-info {
+    padding: 1.5rem;
+}
+
+.fabrication-info h4 {
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+}
+
+.fabrication-info .categorie {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.fabrication-statut {
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.statut-label {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.fabrication-date {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #666;
+    margin: 1rem 0;
+    padding: 0.75rem;
+    background: #f8f9fa;
+    border-radius: 4px;
+}
+
+.fabrication-etapes {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+    position: relative;
+}
+
+.fabrication-etapes:before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #ddd;
+    z-index: 1;
+}
+
+.fabrication-etapes .etape {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    flex: 1;
+}
+
+.etape-num {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: #ddd;
+    color: white;
+    border-radius: 50%;
+    margin: 0 auto 0.5rem;
+    line-height: 30px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.etape.active .etape-num {
+    background: #3498db;
+}
+
+.etape-label {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.etape.active .etape-label {
+    color: #3498db;
+    font-weight: 500;
+}
+
+/* Header & Footer Modern Responsive Styles */
+.site-header {
+    background: #222e3a;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    padding: 0;
+}
+.site-header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 0;
+}
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: color 0.2s;
+}
+.logo span {
+    color: #4fc3f7;
+}
+.main-nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.main-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 0.3rem 0.7rem;
+    border-radius: 4px;
+    transition: background 0.2s, color 0.2s;
+}
+.main-nav a:hover, .main-nav .active {
+    background: #4fc3f7;
+    color: #222e3a;
+}
+.user-menu {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1.2rem;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    margin-right: 0.5rem;
+}
+.btn-secondary {
+    background: #e0e0e0;
+    color: #222;
+}
+.btn-secondary:hover {
+    background: #bdbdbd;
+}
+
+@media (max-width: 900px) {
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    .main-nav ul {
+        gap: 1rem;
+    }
+}
+@media (max-width: 600px) {
+    .site-header .container {
+        padding: 0 0.5rem;
+    }
+    .logo {
+        font-size: 1.3rem;
+    }
+    .main-nav a {
+        font-size: 1rem;
+        padding: 0.3rem 0.4rem;
+    }
+}
+
+.site-footer {
+    background: #222e3a;
+    color: #fff;
+    padding: 2.5rem 0 1rem 0;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.07);
+    margin-top: 3rem;
+}
+.site-footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+.footer-section h3 {
+    color: #4fc3f7;
+    margin-bottom: 0.7rem;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.footer-section a:hover {
+    color: #4fc3f7;
+}
+.newsletter-form {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+.newsletter-form input[type="email"] {
+    flex: 1;
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: none;
+    font-size: 1rem;
+}
+.newsletter-form button {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    border: none;
+    background: #4fc3f7;
+    color: #222e3a;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.newsletter-form button:hover {
+    background: #3498db;
+    color: #fff;
+}
+.footer-bottom {
+    text-align: center;
+    color: #b0bec5;
+    font-size: 0.95rem;
+    border-top: 1px solid #334155;
+    padding-top: 1rem;
+}
+@media (max-width: 700px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    .site-footer .container {
+        padding: 0 0.5rem;
+    }
+}
